@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="https://seeklogo.com/images/C/Carrinho_de_Compras-logo-F251151A71-seeklogo.com.png">
+    <title>Sistema de Compra</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden; 
+        background-image: url("http://s2.glbimg.com/7-hknclnun_oevh51dxuplLsLdg=/e.glbimg.com/og/ed/f/original/2015/09/28/supermercado.jpg");
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    * {
+       
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+
+        background-color: black;
+        text-align: center;
+        color: white;
+        padding: 20px 0;
+    }
+
+    .lista-super {
+        text-align: center;
+        display: flex;
+        margin: 20px 0;
+
+
+    }
+
+    .lista-super input[type=text] {
+        text-align: center;
+        flex: 1;
+        height: 40px;
+        padding-left: 20px;
+    }
+
+    .lista-super input[type=number] {
+        text-align: center;
+        flex: 1;
+        height: 40px;
+        padding-left: 20px;
+    }
+
+    .lista-produto-single {
+        display: flex;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lista-produto-single h3 {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+    h3.price-produto {
+        text-align: right;
+        font-size: 18px;
+    }
+
+    h3.price-produto>span {
+        background-color: blanchedalmond;
+        padding: 8px 10px;
+        border-radius: 20px;
+    }
+
+    .soma-produto {
+        margin: 20px;
+    }
+
+    .centered {
+        margin: 0 auto !important;
+        float: none !important;
+    }
+    .top{
+        position: relative;
+    top: 10px;
+    left: 130px;
+    }
+</style>
+
+<body>
+
+    <header>
+        <h2>Lista de Supermercado</h2>
+        <p>Desenvolvido por Samuel Souza</p>
+    </header><br>
+    <div class="container">
+
+<div class="row g-2">
+    <div class="input-group ">
+        <div class="input-group-text">Nome do Produto</div>
+        <input  step="0.01" class="form-control" type="text"  name="nome_produto" maxlength="50">
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-text">Valor</div>
+        <input type="tel"  step="0.01" class="form-control" name="valor_produto" maxlength="30" required onchange="this.value = this.value.trim()">
+      </div>
+    </div>
+    <br>
+  
+     <hr style="color: red; height: 10px;">
+
+     
+        </div>
+
+        <div class="lista-super">
+            <div class="mb-3 col-sm-6 centered ">
+              
+                <input type="submit" class="btn btn-danger" name="acao" value="Somar" >
+                <button class="btn btn-warning" name="limpar">Limpar</button>
+                <input type="button" class="btn btn-dark" value="Imprimir" onClick="window.print()" />
+            </div>
+        </div>
+
+
+
+
+        <div class="lista-pro"></div>
+        <hr style="color: red; font-size: 60px;">
+        <div class="soma-produto">
+            <h1 style="color: #3c763d;">Total: R$0</h1>
+        </div>
+
+        
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="supermercado.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>
